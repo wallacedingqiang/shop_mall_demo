@@ -12,7 +12,7 @@ class GoodsDataBase():
         cmd="select ID,name,price from goods"
         message=conn.execute(cmd)
         print("=" * 100)
-        title = "%-10s|%40s|%15s" % ("商品编号", "商品名称", "商品价格")
+        title = "%10s|%40s|%15s" % ("商品编号", "商品名称", "商品价格")
         print(title)
         for info in message:
             line = "%-12s|%42s|%17s" % (info[0], info[1] ,info[2])
